@@ -1,4 +1,5 @@
 # dice roll simulator
+import random
 
 loop = True
 while loop:
@@ -11,16 +12,22 @@ while loop:
     print("5: Exit")
 
     # menu selection
-    selection = input("\nEnter a number 1-5: ")
+    selection = input("Enter a number 1-5: ")
 
     if selection == "1":
-        print("Roll Dice Once")
+        print("\nRoll Dice Once")
+        randnum1 = random.randrange(1, 6)
+        randnum2 = random.randrange(1, 6)
+        sum = randnum1 + randnum2
+        print("sum: "str(sum))
     elif selection == "2":
-        print("Roll Dice 5 Times")
+        print("\nRoll Dice 5 Times")
     elif selection == "3":
-        print("Roll Dice 'n' Times")
+        print("\nRoll Dice 'n' Times")
     elif selection == "4":
-        print("Roll Dice until Snake Eyes")
+        print("\nRoll Dice until Snake Eyes")
+
+        # use break statement
     elif selection == "5":
-        print("Exit")
+        print("\nExit")
         loop = False
