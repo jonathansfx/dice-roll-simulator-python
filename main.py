@@ -16,16 +16,41 @@ while loop:
 
     if selection == "1":
         print("\nRoll Dice Once")
-        randnum1 = random.randrange(1, 6)
-        randnum2 = random.randrange(1, 6)
+        randnum1 = random.randint(1, 6)
+        randnum2 = random.randint(1, 6)
         sum = randnum1 + randnum2
-        print("sum: "str(sum))
+        print(f"{randnum1},{randnum2} (sum: {sum})")
     elif selection == "2":
         print("\nRoll Dice 5 Times")
+        i = 0
+        while i < 5:
+            randnum1 = random.randint(1, 6)
+            randnum2 = random.randint(1, 6)
+            sum = randnum1 + randnum2
+            print(f"{randnum1},{randnum2} (sum: {sum})")
+            i += 1
     elif selection == "3":
         print("\nRoll Dice 'n' Times")
+        n = input("\nenter the amount of rolls you want: ")
+        i = 0
+        while i < int(n):
+            randnum1 = random.randint(1, 6)
+            randnum2 = random.randint(1, 6)
+            sum = randnum1 + randnum2
+            print(f"{randnum1},{randnum2} (sum: {sum})")
+            i += 1
     elif selection == "4":
         print("\nRoll Dice until Snake Eyes")
+        i = 0
+        while i < 9999:
+            randnum1 = random.randint(1, 6)
+            randnum2 = random.randint(1, 6)
+            sum = randnum1 + randnum2
+            print(f"{randnum1},{randnum2} (sum: {sum})")
+            i += 1
+            if sum == 2:
+                print(f"SNAKE EYES! It took {i} rolls to get snake eyes.")
+                break
 
         # use break statement
     elif selection == "5":
