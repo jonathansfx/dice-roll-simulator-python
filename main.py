@@ -42,7 +42,7 @@ while loop:
     elif selection == "4":
         print("\nRoll Dice until Snake Eyes")
         i = 0
-        while i < 9999:
+        while i >= 0:
             randnum1 = random.randint(1, 6)
             randnum2 = random.randint(1, 6)
             sum = randnum1 + randnum2
